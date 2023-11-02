@@ -1,0 +1,32 @@
+p.none{border-style: none;}
+p.dotted{border-style: dotted;}
+p.dashed{
+    border-style: dashed;
+    border-width: 10;
+    font-weight: 400;
+}
+p.solid{
+    border-style: solid;
+    border-width: 5px;
+    font-family: fantasy;
+    font-variant: small-caps;
+    letter-spacing: 10px;
+}
+p.double{
+    border-style: double;
+    border-width: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    word-spacing: 10px;
+    text-shadow: 4px 4px 8px ;
+}
+p.groove{
+    border-style: groove;
+    border-width: 12px;
+    border-color: #cf9859;
+    font-family:Verdana;
+    text-indent: 1cm;
+}
+p.ridge{border-style: ridge;}
+p.inset{border-style: inset;}
+p.outset{border-style: outset;}
+p.hidden{border-style: hidden;}

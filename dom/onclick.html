@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <button id="btn">click me</button>
+        <button id="btn1" onclick="console.log('clicked')">click me</button>
+        <button id="btn2" onclick="alert('clicked')">check</button>
+
+        <script>
+            let btn=document.querySelector('#btn');
+
+            btn.addEventListener('click',(event)=>{
+                console.log('clicked');
+            });
+        </script>
+    </body>
+</html>

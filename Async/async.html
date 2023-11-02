@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <script>
+           /* function greet(name,callback){
+                console.log("Hi "+name)
+                callback();
+                console.log("completed greet")
+            }
+            function callme(){
+                console.log("i am callback function")
+
+            }
+            greet("hari",callme);
+            */
+
+          /*  function greet(){
+                console.log("hello world")
+            }
+            function sayname(name){
+                console.log("hello "+name)
+
+            }
+
+            setTimeout(greet,2000);
+            sayname("hari")*/
+
+            function greet(name,myfunction){
+                console.log("hello world")
+                myfunction(name);
+            }
+            function sayname(name){
+                console.log("hello "+name)
+
+            }
+
+            setTimeout(greet,2000,'hari',sayname);
+        </script>
+    </body>
+</html>

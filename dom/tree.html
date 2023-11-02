@@ -1,0 +1,29 @@
+<html>
+    <body>
+        
+        <div id="main">
+            <p class="note">this is a note</p>
+        </div>
+        <input type="text" id="username" secured="true" value="ganesh">
+        <script>
+           /* let note1=document.querySelector('.note');
+            let note2=document.querySelector('*')
+            console.log(note2)
+           // console.log(note1);
+            console.log(note1.parentNode)*/
+
+          /*  let input=document.querySelector('#username');
+            console.log(input.secured);*/
+
+
+          let input=document.querySelector('#username');
+            console.log(input.secured);
+            console.log(input.value);
+
+            for(let attr of input.attributes){
+                console.log(`${attr.name}=${attr.value}`)
+            }
+            
+        </script>
+    </body>
+</html>

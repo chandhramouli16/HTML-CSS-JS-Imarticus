@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+            function Person(firstName,lastName){
+                //this - creating empty object
+                this.firstName=firstName; //this.propertyName=parameter
+                this.lastName=lastName;
+                this.getFullName=function(){
+                    return this.firstName+" "+this.lastName;
+                }
+            }
+
+            //To create a new instance of the Person, you can use 'new' operator
+            let person1=new Person('John','Doe');
+            let person2=new Person('James','Smith');
+            console.log(person1.getFullName());
+            console.log(person2);
+        </script>
+    </body>
+</html>

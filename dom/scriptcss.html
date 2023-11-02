@@ -1,0 +1,22 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="content" style="color: aqua; font-style: normal;"> java script script css demo </p>
+        <button id="btn">sumbit</button>
+        <script>
+            let p=document.querySelector('#content');
+            p.style.color='red';
+            p.style.fontWeight='bold';
+            p.style.fontStyle='italic';
+
+
+            let btn=document.querySelector('#btn')
+            function display(){
+                alert('it was clicked');
+            }
+            btn.addEventListener('click',display)
+        </script>
+    </body>
+</html>

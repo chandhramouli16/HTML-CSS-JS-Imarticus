@@ -1,0 +1,102 @@
+<html>
+    <body>
+        <script>
+            //Static method
+            class Person{
+                constructor(name){
+                    this.name=name;
+                }
+                getName(){
+                    return this.name;
+                }
+                static createAnonymous(gender){
+                    let name=gender=="male" ? "Vignesh":"Lavanya";
+                    return new Person(name);
+                }
+            }
+            console.log(Person.createAnonymous("male"));
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            class Item{
+                static count=0; //Static property
+                static getCount(){ //Static method
+                    return Item.count;
+                }
+            }
+
+            console.log(Item.getCount()); //0
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            function add(x,y){
+                return x+y;
+            }
+
+            let result=add(10,20); //calling the function
+            console.log(result); //30
+
+            let result1=add.call(this,10,20); //Calling the function using call() method
+            console.log(result1); //30
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            var greeting="Hi";
+
+            var messenger={
+                greeting: 'Hello'
+            }
+
+            function say(name){
+                console.log(this.greeting+" "+name);
+            }
+            say.call(this,'John');
+            say.call(messenger,'John');
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            function Box(height,width){
+                this.height=height;
+                this.width=width;
+            }
+            function Widget(height,width,color){
+                Box.call(this,height,width);
+                this.color=color;
+            }
+            let widget=new Widget(100,200,'red');
+            console.log(widget);
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            //Object = state(data)+behaviour(function/action/method)
+            const car={
+                name:'car',
+                start(){
+                    console.log('Start the '+this.name);
+                },
+                speedUp(){
+                    console.log('Speed up the '+this.name);
+                },
+                stop(){
+                    console.log('Stop the '+this.name);
+                },
+            };
+
+            const aircraft={
+                name:'aircraft-JetOne',
+                fly(){
+                    console.log('Fly');
+                },
+            };
+
+            car.start.call(aircraft);
+            car.speedUp.call(aircraft);
+            aircraft.fly();
+        </script>
+    </body>
+</html>

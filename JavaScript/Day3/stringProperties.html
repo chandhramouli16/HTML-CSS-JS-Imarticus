@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <script>
+
+            //Length of the string
+            let sentence="Program";
+            let len=sentence.length;
+            
+            console.log(len);
+
+            //Length is readonly
+            let string1="Programming";
+            //Assigning value to string's length property
+            string1.length=5;
+            //Doesn't change the original string
+            console.log(string1);
+            //Returns the length of "Programming"
+            console.log(string1.length);
+
+//----------------------------------------------------------------------------------------------------//
+
+            //charAt() Method
+            const str1="Hello World!";
+            let index1=str1.charAt(1);
+
+            console.log("Character at index 1: "+index1);
+
+            //A non-integer value in charAt()
+            console.log("Character at index 6.3: "+str1.charAt(6.3));
+            console.log("Character at index 6.9: "+str1.charAt(6.9));
+            console.log("Character at index 6: "+str1.charAt(6));
+
+            //Without passing parameters at charAt()
+            console.log("str1.charAt(): "+str1.charAt());
+
+//----------------------------------------------------------------------------------------------------//
+
+            //Using charCodeAt() - will print ASCII values  A-65 a-97
+            console.log("ASCII value of char at index 0: "+str1.charCodeAt(0));
+            
+            //IndexOutOfBounds 
+            console.log(str1.charCodeAt(20)); //NaN
+            console.log(str1.charCodeAt(-2)); //NaN
+
+//----------------------------------------------------------------------------------------------------//            
+
+            //Using codePointAt() - will also print ASCII values
+            console.log(str1.codePointAt());
+            console.log(str1.codePointAt(20)); //undefined
+
+//----------------------------------------------------------------------------------------------------//
+
+            //Using concat() method
+            console.log("".concat({})); //[object Object]
+            console.log("".concat(null)); //null
+            console.log("".concat(true)); //true
+            console.log("".concat(4,5)); //45
+
+            let str2="Hello";
+            let str3="World";
+
+            //concatenating two strings
+            let newStr=str2.concat(",",str3,"!");
+            console.log(`str2.concat(",",str3,"!"): `+newStr);
+
+//----------------------------------------------------------------------------------------------------//
+
+            //Using endsWith() method
+            console.log(str2.endsWith("o")); //return true
+            console.log(str3.endsWith("rld")); //true
+
+//----------------------------------------------------------------------------------------------------//
+
+            //Using match() method
+            const message="JavaScript is a fun programming language";
+
+            const exp=/programming/;
+
+            console.log(message.match(exp));
+
+            console.log(message.match("is"));
+
+//----------------------------------------------------------------------------------------------------//
+
+            //Using repeat() method
+            const holiday="Happy holiday\n";
+
+            console.log(holiday.repeat(3));
+
+//----------------------------------------------------------------------------------------------------//
+
+            //Using replace() method
+            const replace="ball bat";
+
+            console.log(replace.replace('b','c'));
+
+        </script>
+    </head>
+</html>

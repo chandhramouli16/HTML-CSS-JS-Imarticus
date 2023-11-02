@@ -1,0 +1,62 @@
+<html>
+    <body>
+        <script>
+            function square(x){
+                x=x*x;
+                return x;
+            }
+            let y=10;
+            let result=square(y);
+
+            console.log(result);
+            console.log(y);
+
+//----------------------------------------------------------------------------------------------------//
+
+            let person={name:'John',age:25}; //person is an object
+
+            function increaseAge(obj){
+                obj.age++;
+                obj={name:'Jane',age:22};
+                //console.log(obj);
+            }
+
+            increaseAge(person);
+            console.log(person);
+
+//----------------------------------------------------------------------------------------------------//
+
+            //Default parameters
+            function sum(x=3,y=5){
+                return x+y;
+            }
+
+            console.log(sum(5,15));//20
+            console.log(sum(7));//12
+            console.log(sum());//9
+
+//----------------------------------------------------------------------------------------------------//
+
+            function sum1(y=1,x=y){
+                console.log(x+y);
+            }
+            sum1();
+
+            function sum2(x=y,y=1){
+                return x+y;
+            }
+            //sum2();
+
+//----------------------------------------------------------------------------------------------------//
+
+            const sum3=()=>15;
+
+            const calculate=function(x,y=x*sum3()){
+                return x+y;
+            }
+            const result1=calculate(10);
+            console.log(result1); //160
+
+        </script>
+    </body>
+</html>

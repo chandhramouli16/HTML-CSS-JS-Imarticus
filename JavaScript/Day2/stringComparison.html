@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <h1>Demo: String & Object Comparison</h1>
+
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        <p id="p4"></p>
+
+        <script>
+            let str1="Hello"; //String Datatype
+            let str2='Hello'; //String Datatype
+            let str3=new String('Hello'); //Object
+
+            document.getElementById("p1").innerHTML= str1==str2;
+            document.getElementById("p2").innerHTML= str1===str2;
+            document.getElementById("p3").innerHTML= str1==str3;
+            document.getElementById("p4").innerHTML= str1===str3;
+
+        </script>
+
+    </body>
+</html>

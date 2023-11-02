@@ -1,0 +1,80 @@
+<html>
+    <body>
+        <script>
+            let student={
+                firstName:'Monica',
+                lastName:'Daniel',
+                set changeName(newName){
+                    this.firstName=newName;
+                },
+                get getName(){
+                    return this.firstName;
+                },
+                toString(){
+                    return this.firstName;
+                }
+            };
+
+            //accessing data property
+            console.log(student.firstName+" "+student.lastName);
+
+            student.changeName='Sarah';
+
+            //accessing getter methods
+            console.log(student.getName);
+
+            console.log(student);
+
+            console.log(student.toString());
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            //Constructor
+            function Person(){
+                this.name='Mouli';
+                this.age=23;
+            }
+
+            //Creating objects
+            const person1=new Person();
+            const person2=new Person();
+
+            //Adding property to constructor function
+            Person.prototype.gender='Male';
+
+            //Prototype value of Person
+            console.log(Person.prototype);
+
+            //Inherting the property from prototype
+            console.log(person1.gender);
+            console.log(person2.gender);
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            function Person1(){
+                this.name='John';
+            }
+            //Adding a property
+            Person1.prototype.age=22;
+
+            //Creating an object
+            const person3=new Person1();
+
+            console.log(person3.age); //22
+
+            //Changing the property value of prototype
+            Person1.prototype={age:20};
+
+            //Creating new object
+            const person4=new Person1();
+
+            console.log(person4.age);//20
+
+            Person1.prototype.name='Peter'; //Doesn't replace by this method
+
+            console.log(person4.name); //John
+        </script>
+    </body>
+</html>

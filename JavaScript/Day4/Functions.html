@@ -1,0 +1,91 @@
+<html>
+    <body>
+        <script>
+            var name="Chandhramouli";
+            console.log(name);
+
+            //Anonymous function = There is no name for the function
+            let show=function(){
+                console.log('Anonymous Function');
+            };
+
+            //Normal function
+            function mul(x,y){
+                return x*y;  
+            }
+
+            //Anonymous Function
+            let x=function(x,y){
+                return x*y;
+            }
+
+            //Arrow Function
+            let x1=(x,y)=> x*y;
+
+            console.log(x(10,20));
+            console.log(mul(10,20));
+            console.log(x1(10,20));
+
+//----------------------------------------------------------------------------------------------------//
+
+            //Arrow function with no arguments
+            let greet=()=>console.log('Hello');
+            greet();
+
+            //Arrow function with one argument
+            let greet1=x=>console.log(x);
+            greet1('Hello');
+
+            //Arrow function as an expression
+            let age=5;
+            let welcome=(age<18) ?
+                ()=>console.log('Baby'):
+                ()=>console.log('Adult');
+
+            welcome();
+
+//----------------------------------------------------------------------------------------------------//
+
+            function Person(){
+                this.name='Jack';
+                this.age=25;
+                this.sayName=function(){
+                    //this is accessible
+                    console.log(this.age); //25
+
+                    function innerFunc(){
+                        //this refers to the global object
+                        console.log(this.age); //undefined
+                        console.log(this);
+                    }
+
+                    innerFunc();
+                }
+            }
+            let x2=new Person();
+            x2.sayName();
+            
+//----------------------------------------------------------------------------------------------------//
+
+            function Person1(){
+                this.name='Jack';
+                this.age=25;
+                this.sayName=function(){
+                    //this is accessible
+                    console.log(this.age); //25
+
+                    let innerFunc=()=>{
+                        //this refers to the global object
+                        console.log(this.age); //25
+                        console.log(this);
+                    }
+
+                    innerFunc();
+                }
+            }
+            let x3=new Person1();
+            x3.sayName();
+
+        </script>
+    </body>
+</html>

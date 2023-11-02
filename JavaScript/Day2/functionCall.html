@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <button onclick="greet()">Click Here</button>
+        <script>
+            function greet(){
+                alert("Hello!!");
+            }
+
+            function displayName(name){
+                alert("Hello "+name);
+            }
+
+            name=prompt("Enter a name: ");
+
+            displayName(name);
+
+            function add(a,b){
+                alert("a+b");
+            }
+
+            add(3,4);
+            add(2,9);
+
+            let a="hello"; //Global variable
+            function concat(){
+                let b=" world"; //Local variable
+                console.log(a+b);
+            }
+
+            concat();
+            console.log(a+b); //error
+
+        </script>
+    </body>
+</html>

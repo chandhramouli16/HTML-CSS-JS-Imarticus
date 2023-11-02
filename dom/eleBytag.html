@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h1>h1 tag</h1>
+        <h2>h2 tag</h2>
+        <p>para tag</p>
+        <h2>h2 tag</h2>
+        <p>para tag</p>
+        <h2>h2 tag</h2>
+        <H2>H2 tag</H2>
+        <button id="btncount">count h2</button>
+
+        <script>
+            let btn=document.getElementById('btncount');
+            btn.addEventListener('click',()=>{
+                let heading=document.getElementsByTagName('h2');
+                console.log(heading);
+                alert(`the number of h2 tag: ${heading.length}`)
+            })
+        </script>
+    </body>
+</html>

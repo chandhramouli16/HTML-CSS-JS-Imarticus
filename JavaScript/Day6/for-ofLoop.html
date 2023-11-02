@@ -1,0 +1,67 @@
+<html>
+    <body>
+        <script>
+            //For-of Loop
+            const students=['John','Sara','Jack'];
+
+            //Using for...of
+            for(let element of students){
+                console.log(element); //Prints the value
+            }
+
+            //for-in Loop
+            for(const obj in students){
+                console.log(obj); //Prints the index
+                console.log(students[obj]);
+            }
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            const string='code';
+
+            for(let i of string){
+                console.log(i);
+            }
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            const set=new Set([1,2,3,2,4]); //Set does not allow duplicate
+
+            //Looping through set
+            for(let i of set){
+                console.log(i);
+            }
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            //define Map 
+            let map=new Map();
+
+            //Inserting elements
+            map.set('name','Jack');
+            map.set('age','25');
+
+            //Looping through Map
+            for(let[key,value] of map){
+                console.log(key+' - '+value);
+            }
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            const person2={
+                'studId':12,
+                'studName':'Ganga',
+                'Mark':76
+            };
+
+            for(const obj in person){
+                console.log(obj+' - '+person[obj]);
+            }
+
+        </script>
+    </body>
+</html>

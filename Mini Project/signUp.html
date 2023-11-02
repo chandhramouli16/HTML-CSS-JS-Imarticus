@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint"content="width=device-width,initial-scale=1">
+        <title>BootStrap Simple Table</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+        <style>
+            thead{
+                text-align: center;
+            }
+            body{
+                background-image:url(bg.jpg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="m-4">
+            <form action="LoginForm.html">
+                <table class="table table-striped table-secondary">
+                    <thead>
+                        <td colspan="2"><h1 style="font-family: Bakerville;font-weight: 700;">TravelPlanner Sign up form</h1></td>
+                    </thead>
+                    <tr>
+                        <td><label for="inputFirstName">First Name: </label></td>
+                        <td><input type="text" class="form-control" id="inputFirstName" placeholder="FirstName"></td>   
+                    </tr>
+                    <tr>
+                        <td><label for="inputLastName">Last Name: </label></td>
+                        <td><input type="text" class="form-control" id="inputLastName" placeholder="LastName"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="inputEmail">Email: </label></td>
+                        <td><input type="email" class="form-control" id="inputEmail" placeholder="Email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="inputPassword">Password: </label></td>
+                        <td><input type="password" class="form-control" id="inputPassword" placeholder="Password" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="inputDOB">Date of Birth: </label></td>
+                        <td><input type="date" class="form-control" id="inputDOB" ></td>
+                    </tr>
+                    <tr>
+                        <td><label for="inputAge">Age: </label></td>
+                        <td><input type="number" id="inputAge" ></td>
+                    </tr>
+                    <tr>
+                        <td><label id="inputGender">Gender: </label></td>
+                        <td><input type="radio" group="inputGender">Male <input type="radio" group="inputGender">Female</td>
+                    </tr>
+                    <tr>
+                        <td><label id="inputAddress">Address: </label></td>
+                        <td><textarea rows="5" class="form-control"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input type="reset" name="Reset"><input type="submit" name="Submit"></td>
+                    </tr>
+                </table>
+        </form>
+        </div>
+    </body>
+</html>

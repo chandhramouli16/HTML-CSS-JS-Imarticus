@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <script>
+            let x=new Promise(function(resolve,reject){
+                resolve("promise resolved")
+            });
+            x.finally(
+                function greet(){
+                    console.log("this code is excuted.")
+                }
+            );
+        </script>
+        
+    </body>
+</html>

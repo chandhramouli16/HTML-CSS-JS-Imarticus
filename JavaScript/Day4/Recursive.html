@@ -1,0 +1,68 @@
+<html>
+    <body>
+        <script>
+            function countDown(fromNumber){
+                console.log(fromNumber);
+
+                let nextNumber=fromNumber-1;
+                if(nextNumber>0){
+                    countDown(nextNumber);
+                }
+            }
+
+            countDown(3);
+
+//----------------------------------------------------------------------------------------------------//
+
+            let countDown1=function f(fromNumber){
+                console.log(fromNumber);
+
+                let nextNumber=fromNumber-1;
+                if(nextNumber>0){
+                    f(nextNumber);
+                }
+            }
+            let newYearCountDown=countDown1;
+            countDown1=null;
+            newYearCountDown(10);
+
+//----------------------------------------------------------------------------------------------------//
+
+            function sum(n){
+                if(n<=1){
+                    return n;
+                }
+                return n+sum(n-1);
+            }
+
+            console.log("Sum = "+sum(5));
+
+//----------------------------------------------------------------------------------------------------//
+
+            function fact(n){
+                if(n<=1)
+                    return n;
+                return n*fact(n-1);
+            }
+
+            console.log("Factorial = "+fact(5));
+
+//----------------------------------------------------------------------------------------------------//
+
+            function fibo(fib1, fib2,n){
+                if(n==1){
+                    console.log(fib1);
+                    return;
+                }
+                console.log(fib1);
+                fib3=fib1+fib2;
+                fib1=fib2;
+                fib2=fib3;
+                fibo(fib1,fib2,n-1);
+            }
+
+            fibo(0,1,9);
+
+        </script>
+    </body>
+</html>

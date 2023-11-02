@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <p id="p1"></p>
+        <p id="p2"></p>
+
+        <p id="p3"></p>
+        <p id="p4"></p>
+
+        <script>
+            let amount=1000,rate=0.05,duration=3;
+            let check=amount*(1+rate*duration);
+            let result=`Total amount payable: ${amount*(1+rate*duration)}`;
+
+            document.getElementById("p1").innerHTML=result;
+            document.getElementById("p2").innerHTML=check;
+
+            let str1="This is \"simple\" string";
+            let str2="This is \'simple\' string";
+
+            document.getElementById("p3").innerHTML=str1;
+            document.getElementById("p4").innerHTML=str2;
+
+        </script>
+    </body>
+</html>

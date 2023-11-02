@@ -1,0 +1,19 @@
+<html>
+    <body>
+        
+        <script>
+            const count=true;
+
+            let countvalue=new Promise(function(resolve,reject){
+                if(count){
+                    resolve("there is a resolved count value.");
+                }
+                else{
+                    reject("there is no reject count value")
+                }
+            });
+
+            console.log(countvalue);
+        </script>
+    </body>
+</html>

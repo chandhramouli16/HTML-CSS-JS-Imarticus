@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Variables</title>
+    </head>
+    <body>
+        <h1>Demo: JavaScript variables</h1>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+
+        <button onclick="check()">Check</button>
+        <p id="p4"></p>
+        <p id="p5"></p>
+
+        <p id="p6"></p>
+        <p id="p7"></p>
+
+        <p id="p8"></p>
+        <p id="p9"></p>
+        <p id="p10"></p>
+
+        <script>
+
+            let name="Steve";
+            let num=100;
+            let isActive=true;
+
+            document.getElementById("p1").innerHTML=name;
+            document.getElementById("p2").innerHTML=num;
+            document.getElementById("p3").innerHTML=isActive;
+
+            function check(){
+                var x=10; //Global Variable
+                if(true){
+                    let x=100; //Local variable - "let" is active only within the block
+                    document.getElementById("p4").innerHTML=x;
+                }
+                document.getElementById("p5").innerHTML="Var variable: "+x;
+            }
+
+            const role="Trainer";
+            //role="Faculty"; 
+            const person={name1: 'Steve'}; //JSON - key & value pair 
+            //When const is in JSON format the value can be changed but the key cannot.
+            person.name1="Bill";
+
+            let product={pname:"WD"};
+            product.pname="SeaGate";
+
+            document.getElementById("p6").innerHTML=person.name1;
+            document.getElementById("p7").innerHTML=role;
+
+            /*
+                let num1=100;
+                let num2=num1;
+
+                document.getElementById("p1").innerHTML=num1;
+                document.getElementById("p2").innerHTML=num2;
+            */
+
+        </script>
+
+    <script>
+        let greet="Hello";
+    
+        function myFunction(){
+            msg="JavaSript";
+            document.getElementById("p8").innerHTML=greet+msg;
+        }
+
+        myFunction();
+    
+        document.getElementById("p9").innerHTML=greet;
+        document.getElementById("p10").innerHTML=msg;
+    </script>
+
+    </body>
+</html>

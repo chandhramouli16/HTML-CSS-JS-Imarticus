@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <h1>Demo: Date</h1>
+        <p id="p1"></p>
+        <p id="p2"></p>
+
+        <p id="p3"></p>
+
+        <script>
+            document.getElementById("p1").innerHTML=Date();
+
+            var currentDate=new Date();
+
+            document.getElementById("p2").innerHTML=currentDate;
+
+//----------------------------------------------------------------------------------------------------//
+
+            //Date compare
+            var date1=new Date('4-1-2015');
+            var date2=new Date('4-2-2015');
+
+            if(date1>date2)
+                document.getElementById("p3").innerHTML=date1.toDateString()+" is greater than "+date2.toDateString();
+            else
+                document.getElementById("p3").innerHTML=date2.toDateString()+" is greater than "+date1.toDateString();
+            
+        </script>
+    </body>
+</html>

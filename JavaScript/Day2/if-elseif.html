@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <p id="p1">Mark = </p>
+        <script>
+            let mark=prompt("Enter the mark: ");
+            if(mark>=90){
+                document.getElementById("p1").innerHTML+=mark+" (Excellent)";
+            }
+            else if(mark>=80){
+                document.getElementById("p1").innerHTML+=mark+" (very Good)";
+            }
+            else if(mark>=70){
+                document.getElementById("p1").innerHTML+=mark+" (Good)";
+            }
+            else if(mark>=60){
+                document.getElementById("p1").innerHTML+=mark+" (Work Hard)";
+            }
+            else{
+                document.getElementById("p1").innerHTML+=mark+" (Improvement required)";
+            }
+        </script>
+    </body>
+</html>

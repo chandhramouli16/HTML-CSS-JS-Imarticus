@@ -1,0 +1,97 @@
+<html>
+    <body>
+        <script>
+            //Object
+            let person={
+                firstName:'John',
+                lastName:'Doe'
+            };
+
+            //Function
+            person.greet=function(){
+                console.log("Hello");
+            }
+
+            person.greet();
+            console.log(person);
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            let person1={
+                firstName:'John',
+                lastName:'Doe',
+                greet: function(){
+                    console.log('Hello, World!');
+                },
+                getFullName: function(){
+                    return this.firstName+" "+this.lastName;
+                }
+            };
+
+            console.log(person1.firstName);
+            console.log(person1.getFullName);
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            function Person(firstName,lastName){
+                this.firstName=firstName;
+                this.lastName=lastName;
+
+                this.getFullName=function(){
+                    console.log(this.firstName+" "+this.lastName);
+                }
+            };
+            let obj=new Person('Chandhrmouli','S');
+            //let obj=Person('Chandhrmouli','S');
+            console.log(obj);
+            obj.getFullName();
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            //For handling the error which raises when an object is created without 'new' keyword
+            function Person1(firstName,lastName){
+                if(!new.target){
+                    return new Person1('Chandhramouli','S');
+                }
+                this.firstName=firstName;
+                this.lastName=lastName;
+            }
+
+            let PersoN1=Person1('Chandhramouli','S');
+            console.log(PersoN1.firstName);
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            const student={
+                //data property
+                firstName:'Kaviya',
+                //accessor property(getter)
+                get getName(){
+                    return this.firstName;
+                },
+                set changeName(newName){
+                    this.firstName=newName;
+                }
+            };
+
+            //accessing data property
+            console.log(student.firstName); //Kaviya
+
+            //accessing getter methods
+            console.log(student.getName); //Kaviya
+
+            student.changeName='Priya';
+
+            //accessing getter methods
+            console.log(student.getName); //Priya
+
+            //trying to access as a method
+            //console.log(student.getName());//error
+
+        </script>
+    </body>
+</html>

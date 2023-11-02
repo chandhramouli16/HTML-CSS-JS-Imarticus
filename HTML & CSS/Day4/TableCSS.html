@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <style type="text/css">
+            table.one{border-collapse: collapse;}
+            table.two{border-collapse: separate;}
+            td.a{
+                border-style: dotted;
+                border-width: 5px;
+                border-bottom-color: blueviolet;
+                border-top-color: rgb(67, 24, 107);
+                border-left-color: blueviolet;
+                border-right-color: rgb(67, 24, 107);
+                padding: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+            td.b{
+                border-style: solid;
+                border-width: 5px;
+                border-color: rgb(16, 154, 27);
+                padding: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+            td.c{
+                border-style: solid;
+                border-width: 5px;
+                border-color: rgb(16, 154, 27);
+                padding: 10px;
+                empty-cells: hide;
+            }
+            table.auto{
+                table-layout: auto;
+            }
+            table.fixed{
+                table-layout: fixed;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="one">
+            <caption>collapase border</caption>
+            <tr><td class="a">cell a collapse example</td></tr>
+            <tr><td class="b">cell b collapse example</td></tr>
+        </table><br>
+        <table class="two">
+            <caption>separate border example</caption>
+            <tr><td class="a">cell a seperate example</td></tr>
+            <tr><td class="b">cell b seperate examble</td></tr>
+            <tr><td class="c"></td></tr>
+        </table><br>
+        <table class="auto" border="1" width="100%">
+            <tr>
+                <td width="20%">100000000000000000000000</td>
+                <td width="40%">1000000</td>
+                <td width="40%">100</td>
+            </tr>
+        </table><br>
+        <table class="fixed" border="1" width="100%">
+            <tr>
+                <td width="20%">100000000000000000000000</td>
+                <td width="40%">1000000</td>
+                <td width="40%">100</td>
+            </tr>
+        </table>
+    </body>
+</html>

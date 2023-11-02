@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <p id="p1"></p>
+
+        <p id="p2"></p>
+        <script>
+            const n1=prompt("Enter a number: ");
+
+            if(n1>0){
+                console.log("The number is positive");
+                document.getElementById("p1").innerHTML="The number is positive";
+            }
+            else{
+                console.log("The number is negative");
+                document.getElementById("p1").innerHTML="The number is negative";
+            }
+
+            const n2=prompt("Enter a number: ");
+
+            if(n2%2==0){
+                console.log("The number is Even");
+                document.getElementById("p2").innerHTML="The number is Even";
+            }
+            else{
+                console.log("The number is Odd");
+                document.getElementById("p2").innerHTML="The number is Odd";
+            }
+            console.log("If statement is easy");
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <script>
+            let x=new Promise(function(resolve,reject){
+               resolve("promise resolved");
+              // reject("promise rejected")
+            });
+            x.then(function successvalue(result){
+                console.log(result);
+            })
+            .then(function successvalue(){
+                console.log("you can call multiple function this way..")
+            },)
+
+            .catch(
+                function errorValue(result){
+                    console.log("catch blocked: "+result)
+                }
+
+            );
+
+           
+        </script>
+    </body>
+</html>

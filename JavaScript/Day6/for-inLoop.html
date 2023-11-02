@@ -1,0 +1,87 @@
+<html>
+    <body>
+        <script>
+            //For-in Loop
+            var person={
+            firstName: 'John',
+            lastName: 'Doe',
+            ssn: '229-24-2351'
+            };
+            for(var prop in person){
+                console.log(prop+" : "+person[prop]);
+            }
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            //For-in Loop & Inheritance
+            var decoration={
+                color:'red'
+            };
+            var circle=Object.create(decoration);
+            circle.radius=10;
+
+            for(const prop in circle){
+                console.log(prop);
+            }
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            //For-in Loop & Array
+            const items=[10,20,30];
+            let total=0;
+
+            for(const item in items){
+                total+=items[item];
+            }
+            console.log(total);
+            console.log(total/items.length);
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            /*Array.prototype.four=100;
+
+            const items1=[10,20,30];
+            let total1=0;
+
+            for(var prop in items1){
+                console.log({prop, value: items[prop]});
+                total1+=items[prop];
+            }
+            console.log(total1); 
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________// */
+
+            var arr=[];
+            //Set the third element to 3, other elements are 'undefined'
+            arr[2]=3;
+
+            for(let i=0;i<arr.length;i++){
+                console.log(arr[i]);
+            }
+
+            //The output shows three elements of the array, which is correct
+            for(const key in arr){
+                console.log(arr[key]);
+            }
+
+            console.log("-------------------------------------");
+//_________________________________________________________________________________________________//
+
+            const person1={
+                firstName:'John',
+                lastName: 'Doe'
+            };
+            person1.age=25;
+
+            for(const obj in person1){
+                console.log(obj); //Printing the key
+                console.log(person1[obj]); //Printing the value
+            }
+
+        </script>
+    </body>
+</html>

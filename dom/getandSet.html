@@ -1,0 +1,27 @@
+<html>
+    <body>
+        username:
+        <input type="text" id="username" secured="true" value="ganesh">
+        <br>
+        <hr>
+        password:
+        <input type="password" id="password" style="color:brown;width: 15%;">
+
+        <script>
+           let input = document.querySelector('#username');
+            input.setAttribute('value','guest');
+            console.log(input.value);
+
+           // input.value="admin"
+            console.log(input.getAttribute('value'));
+
+
+
+            let input1=document.querySelector('#password');
+            let styleattr=input1.getAttribute('style');
+            input1.setAttribute("style","color:yellow")
+            console.log(styleattr);
+            console.dir(input1.style);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<html>
+    <body>
+        <h1>Demo: Arrays</h1>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        <p id="p4"></p>
+        <p id="p5"></p>
+
+        <p id="p6"></p>
+        <p id="p7"></p>
+
+        <p id="p8"></p>
+        <p id="p9"></p>
+        <p id="p10"></p>
+        <p id="p11"></p>
+        <p id="p12"></p>
+        <p id="p13"></p>
+
+        <script>
+            //In JS, Array can store heterogeneous datatype unlike Java.
+            let stringArray=["one","two","three"];
+            let numericArray=[1,2,3,4,5];
+            let decimalArray=[1.1,2.2,3.3];
+            let booleanArray=[true,false,false,true];
+            let mixedArray=[1,"Steve","DC",true,255000,5.5];
+
+            document.getElementById("p1").innerHTML="StringArray "+stringArray;
+            document.getElementById("p2").innerHTML="NumericArray "+numericArray;
+            document.getElementById("p3").innerHTML="DecimalArray "+decimalArray;
+            document.getElementById("p4").innerHTML="BooleanArray "+booleanArray;
+            document.getElementById("p5").innerHTML="MixedArray "+mixedArray;
+
+//----------------------------------------------------------------------------------------------------//
+
+            let cities=["Mumbai","New York","Paris","Sydney"];
+            document.getElementById("p6").innerHTML="Length of cities[]: "+cities.length;
+
+            cities[4]="Delhi"; //Add new element at last
+            document.getElementById("p7").innerHTML="cities[]: "+cities;
+
+//----------------------------------------------------------------------------------------------------//
+
+            //Accessing the arrays using at();
+            console.log(numericArray.at(0)); //1
+            console.log(numericArray.at(1)); //2
+            console.log(numericArray.at(2)); //3
+            console.log(numericArray.at(3)); //4
+            console.log(numericArray.at(4)); //5
+            console.log(numericArray.at(5)); //undefined
+
+            //passing negative indices
+            console.log(numericArray.at(-1)); //5
+            console.log(numericArray.at(-2)); //4
+            console.log(numericArray.at(-3)); //3
+            console.log(numericArray.at(-4)); //2
+            console.log(numericArray.at(-5)); //1
+            console.log(numericArray.at(-6)); //undefined
+
+//----------------------------------------------------------------------------------------------------//
+
+            //Adding element using push() - adds at last
+            cities[cities.length]="London"; //Using length property to specify last
+            document.getElementById("p8").innerHTML="cities[]: "+cities;
+
+            cities[9]="Pune";
+            cities.push("Coimbatore");
+            document.getElementById("p9").innerHTML="cities[]: "+cities;
+
+//----------------------------------------------------------------------------------------------------//
+
+            //Adding element using unshift() - adds at first
+            cities.unshift('Ooty','Bangalore');
+
+            document.getElementById("p10").innerHTML="cities[]: "+cities;
+
+//----------------------------------------------------------------------------------------------------//
+
+            //Deleteing elements at last using pop()
+            cities.pop();
+
+            document.getElementById("p11").innerHTML="cities[]: "+cities;
+
+//----------------------------------------------------------------------------------------------------//
+
+            //Deleteing elements at first using shift()
+            cities.shift();
+
+            document.getElementById("p12").innerHTML="cities[]: "+cities;
+
+//----------------------------------------------------------------------------------------------------//
+
+            //Printing only specified indices
+            //cities.slice(0,4) - It prints from 0 to 3
+            document.getElementById("p13").innerHTML="cities.slice(0,4): "+cities.slice(0,4); 
+
+//----------------------------------------------------------------------------------------------------//
+
+            //entries() - will give values with indices
+            const alphabets=['A','B','C'];
+
+            //Array iterator object that contains key-value pairs for each index in the array
+            let iterator=alphabets.entries();
+
+            //iterating through key-value pairs in the array
+            for(let entry of iterator)
+                console.log(entry);
+
+        </script>
+
+    </body>
+</html>
